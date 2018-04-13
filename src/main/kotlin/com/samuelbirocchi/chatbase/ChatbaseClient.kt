@@ -1,5 +1,6 @@
-package br.com.gobots.webservice.analytics
+package com.samuelbirocchi.chatbase
 
+import com.samuelbirocchi.chatbase.model.ChatbaseRequest
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.github.kittinunf.fuel.httpPost
 import mu.KotlinLogging

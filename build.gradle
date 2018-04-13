@@ -6,13 +6,15 @@ buildscript {
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.bmuschko:gradle-nexus-plugin:2.3.1'
     }
 }
 
-group 'com.samuelbirocchi'
-version '0.0.1-SNAPSHOT'
+group = 'com.samuelbirocchi'
+version = '0.0.2'
 
 apply plugin: 'kotlin'
+apply plugin: 'com.bmuschko.nexus'
 
 repositories {
     mavenCentral()

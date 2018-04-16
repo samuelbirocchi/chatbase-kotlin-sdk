@@ -28,7 +28,7 @@ dependencies {
 
     compile 'io.github.microutils:kotlin-logging:1.4.6'
     compile "com.github.kittinunf.fuel:fuel:${fuelVersion}"
-    compile "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.+"
+    compile "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.5"
 }
 
 compileKotlin {
@@ -36,4 +36,39 @@ compileKotlin {
 }
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
+}
+
+modifyPom {
+    //noinspection GroovyAssignabilityCheck
+    project {
+        name 'Chatbase Kotlin SDK'
+        description 'A SDK made in Kotlin to send analytics to chatbase'
+        url 'https://github.com/samuelbirocchi/chatbase-kotlin-sdk'
+
+        scm {
+            url 'https://github.com/samuelbirocchi/chatbase-kotlin-sdk'
+            connection 'scm:https://github.com/samuelbirocchi/chatbase-kotlin-sdk.git'
+            developerConnection 'scm:git://github.com/samuelbirocchi/chatbase-kotlin-sdk.git'
+        }
+
+        licenses {
+            license {
+                name 'MIT License'
+                url 'https://github.com/samuelbirocchi/chatbase-kotlin-sdk/blob/master/LICENSE'
+                distribution 'repo'
+            }
+        }
+
+        developers {
+            developer {
+                id 'samuelbirocchi'
+                name 'Samuel Birocchi'
+                email 'samuel.birocchi@gmail.com'
+            }
+        }
+    }
+}
+
+nexus {
+    repositoryUrl = 'https://oss.sonatype.org/content/repositories/releases/'
 }

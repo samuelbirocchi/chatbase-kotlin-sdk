@@ -49,5 +49,5 @@ val message = ChatbaseRequestMessage(
 
 val request = ChatbaseRequest(listOf(message))
 
-ChatbaseClient().sendAnalytics(chatbaseRequest)
+ChatbaseClient().sendAnalytics(request)
 ```
